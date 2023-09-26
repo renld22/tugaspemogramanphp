@@ -7,5 +7,5 @@ if (mysqli_connect_errno()){
 }else {
     echo "Hore bisa konek";
 }
-
+// test
 ?>
