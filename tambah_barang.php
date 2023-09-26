@@ -26,7 +26,7 @@
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="list_barang.php">Kembali</a>
+    <a href="tampil_barang.php">Kembali</a>
     <br><br>
     <h3>TAMBAH DATA BARANG</h3>
     <form method="POST">
