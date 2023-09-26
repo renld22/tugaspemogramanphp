@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>List Transaksi</title>
+    <title>Tambah Transaksi</title>
 </head>
 <body>
     <h2>Pemograman 1 2023</h2>

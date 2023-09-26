@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah_Transaksi</title>
+    <title>Tambah Transaksi</title>
 </head>
 <?php
-    //Koneksi database
+    //koneksi database
     include 'koneksi.php';
-    //Menangkap data yang dikirim dari form 
+    //menangkap data yang dikirim dari form
     if(!empty($_POST['save'])){
-
+        
         $Tanggal = $_POST['tgl_transaksi'];
         $No = $_POST['no_transaksi'];
         $Jenis = $_POST['jenis_transaksi'];
         $Barang = $_POST['barang_id'];
         $Jumlah = $_POST['jumlah_transaksi'];
-        $User = $_POST['user_id']; 
+        $User = $_POST['user_id'];
         //menginput data ke database
-        $a = mysqli_query($koneksi,"insert into barang values('','$Tanggal','$No','$Jenis','$Barang','$Jumlah,'$User')");
+        $a = mysqli_query($koneksi,"insert into transaksi values('','$Tanggal','$No','$Jenis','$Barang','$Jumlah','$User')");
         if($a){
-            //mengalihkan halaman kembali
+            //mengalihkan ke halaman kembali
             header("location:tambah_transaksi.php");
         }else{
             echo mysqli_error();
@@ -28,17 +28,17 @@
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="tampil_transaksi.php">Kembali</a>
-    <br><br>
+    <a href="tambah_transaksi.php">Kembali</a>
+    <br>
     <h3>TAMBAH DATA TRANSAKSI</h3>
     <form method="POST">
         <table>
             <tr>
                 <td>Tanggal Transaksi</td>
-                <td><Input type="date" name="tgl_transaksi"></td>
+                <td><input type="date" name="tgl_transaksi"></td>
             </tr>
             <tr>
-                <td>No Transaksi</td>
+                <td>Nomor Transaksi</td>
                 <td><input type="number" name="no_transaksi"></td>
             </tr>
             <tr>
@@ -54,14 +54,13 @@
                 <td><input type="number" name="jumlah_transaksi"></td>
             </tr>
             <tr>
-                <td>Id User</td> 
+                <td>Id User</td>
                 <td><input type="number" name="user_id"></td>
             </tr>
             <tr>
-            <td></td>
+                <td></td>
                 <td><input type="submit" name="save"></td>
             </tr>
-
         </table>
     </form>
 </body>
