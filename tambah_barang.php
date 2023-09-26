@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Barang</title>
+    <title>Tambah_Barang</title>
 </head>
 <?php
     //Koneksi database

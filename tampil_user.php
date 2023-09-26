@@ -10,7 +10,8 @@
     <br/>
     <table border="1">
         <tr>
-            <th>Nama</th>
+            <th>id</th>
+            <th>nama</th>
             <th>Password</th>
             <th>level</th>
             <th>status</th>
