@@ -15,6 +15,7 @@
             <th>Kode Barang</th>
             <th>Qty</th>
             <th>Id Kategori</th>
+            <th>Opsi</th>
         </tr>
         <?php
             include 'koneksi.php';

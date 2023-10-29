@@ -16,6 +16,7 @@
             <th>Tanggal Penjualan</th>
             <th>Nama Pelanggan</th>
             <th>Total Harga</th>
+            <th>Opsi</th>
         </tr>
         <?php
             include 'koneksi.php';

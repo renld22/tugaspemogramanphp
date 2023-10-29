@@ -14,6 +14,7 @@
             <th>kode member</th>
             <th>Nama member</th>
             <th>Level</th>
+            <th>Opsi</th>
             
         </tr>
         <?php

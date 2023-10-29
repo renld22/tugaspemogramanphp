@@ -13,7 +13,7 @@
              <th>Id</th>
              <th>Nama kategori</th>
              <th>Diskon</th>
-             <th>opsi</th>
+             <th>Opsi</th>
           </tr> 
           <?php
               include 'koneksi.php';

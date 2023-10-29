@@ -19,6 +19,7 @@
             <th>Jumlah Transaksi</th>
             <th>member Id </th>
              <th>Total</th>
+             <th>Opsi</th>
         </tr>
         <?php
             include 'koneksi.php';
