@@ -12,6 +12,8 @@
           <tr> 
              <th>Id</th>
              <th>Nama kategori</th>
+             <th>Diskon</th>
+             <th>opsi</th>
           </tr> 
           <?php
               include 'koneksi.php';
@@ -22,6 +24,7 @@
           <tr>
                <td><?php echo $no++; ?></td>
                <td><?php echo $d['nama_kategori']; ?></td>
+               <td><?php echo $d['diskon']; ?></td>
                <td>
                <a href="edit_kategori.php?id=<?php echo $d['id_kategori']; ?>">Edit</a>
                <a href="hapus_kategori.php?id=<?php echo $d['id_kategori']; ?>">Hapus</a>
