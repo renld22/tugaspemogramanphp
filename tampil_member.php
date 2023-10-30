@@ -4,7 +4,7 @@
     <title>Tambah Transaksi</title>
 </head>
 <body>
-    <h2>Pemograman 1 2023</h2>
+    <h2>Pemograman 3 2023</h2>
     <br>
     <a href="tambah_member.php">+ Tambah member</a>
     <br>

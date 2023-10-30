@@ -4,7 +4,7 @@
      <title>tampil kategori</title>
 </head>
 <body>
-     <h2>pemograman 1 2023</h2>
+     <h2>pemograman 3 2023</h2>
      <br>
      <a href="tambah_kategori.php">+Tambah kategori</a>
      <br>

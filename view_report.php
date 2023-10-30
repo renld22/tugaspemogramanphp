@@ -59,7 +59,7 @@ $result = $koneksi->query($query);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hasil Transaksi</title>
+    <title>Hasil transaksi</title>
 </head>
 <body>
     <h1>Hasil Transaksi</h1>
