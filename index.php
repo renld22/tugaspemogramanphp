@@ -1,4 +1,16 @@
+
+<?php 
+session_start();
+if(!isset($_SESSION['session_username'])){
+    header("location:login.php");
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -94,6 +106,9 @@
 
             <a href="view_report.php">
                 <button class="btn">VIEW REPORT</button>
+            </a>
+            <a href="logout.php">
+                <button class="btn">LOGOUT</button>
             </a>
         </div>
         <footer>

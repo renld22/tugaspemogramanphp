@@ -25,7 +25,7 @@ while($d = mysqli_fetch_array($data)){
     ?>
     <tr>
         <td><?php echo $no++; ?></td>
-        <td><?php echo $d['nama']; ?></td>
+        <td><?php echo $d['username']; ?></td>
         <td><?php echo $d['password']; ?></td>
         <td><?php echo $d['level']; ?></td>
         <td><?php echo $d['status']; ?></td>
