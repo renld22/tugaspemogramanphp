@@ -1,4 +1,10 @@
-<?php
+
+<?php 
+session_start();
+if(!isset($_SESSION['session_username'])){
+    header("location:index.php");
+    exit();
+}
     include 'koneksi.php';
     $query = "SELECT
     m.nama_member AS Member,

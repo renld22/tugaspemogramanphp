@@ -38,7 +38,7 @@ if(!isset($_SESSION['session_username'])){
 
         header {
             background-color: #94bbe9;
-            color: black;
+            color: white;
             padding: 20px;
         }
 
