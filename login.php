@@ -67,65 +67,99 @@ if(isset($_POST['login'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="//cdn.jsdelivr.net/npm/bootstrap@3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            margin-top: 150px;
+        }
+
+        .panel {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-heading {
+            background-color: #3498db;
+            color: #ffffff;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .panel-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group-addon {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        .btn-login {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .btn-login:hover {
+            background-color: #258cd1;
+        }
+    </style>
 </head>
 <body>
-<div class="container my-4">    
-    <div id="loginbox" style="margin-top:150px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-        <div class="panel panel-info" >
-            <style>
-    .panel.panel-info {
-        background-color: #3498db; /* Biru */
-        color: #ffffff; /* Putih */
-    }
-</style>
-
-            
-            <div class="panel-heading ">
-                <div class="panel-heading text-center">Login dan Masuk </div>
-            </div>      
-            <style>
-    .panel-heading.text-center {
-        font-family: 'Nama Font', sans-serif; /* Ganti 'Nama Font' dengan nama font yang Anda inginkan */
-        font-size: 16px; /* Ganti ukuran font sesuai kebutuhan Anda */
-        /* Opsi lain yang dapat Anda tambahkan, seperti warna teks, tebal, atau gaya lainnya */
-    }
-</style>
-
-            <div style="padding-top:30px" class="panel-body" >
-                <?php if($err){ ?>
-                    <div id="login-alert" class="alert alert-danger col-sm-12">
-                        <ul><?php echo $err ?></ul>
+<div class="container">
+    <div class="mainbox mx-auto col-md-6 col-sm-8">
+        <div class="panel">
+            <div class="panel-heading">Login dan Masuk</div>
+            <div class="panel-body">
+                <?php if($err) { ?>
+                    <div class="alert alert-danger">
+                        <?php echo $err; ?>
                     </div>
-                <?php } ?>                
-                <form id="loginform" class="form-horizontal" action="" method="post" role="form">       
-                    <div style="margin-bottom: 30px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="username" value="<?php echo $username ?>" placeholder="masukan username terlebih dahulu">                                        
-                    </div>
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="password" placeholder="masukan password terlebih dahulu">
-                    </div>
-                    <div class="input-group">
-                        <div class="checkbox">
-                        <label>
-                            <input id="login-remember" type="checkbox" name="ingataku" value="1" <?php if($ingataku == '1') echo "checked"?>> Ingat kan saya
-                        </label>
+                <?php } ?>
+                <form class="form-horizontal" action="" method="post" role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="username" value="<?php echo $username ?>" placeholder="Masukkan username">
                         </div>
                     </div>
-                    <div class="form-group text-center"> <!-- Tambahkan class text-center -->
-  <div class="col-lg-12 controls"> <!-- Hapus "button" dan tambahkan "text-center" -->
-    <input type="submit" name="login" class="btn btn-info" value="Login"/>
-  </div>
-</div>
-
-                    </form>    
-            </div>                     
-        </div>  
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Masukkan password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input id="login-remember" type="checkbox" name="ingataku" value="1" <?php if($ingataku == '1') echo "checked"?>> Ingatkan Saya
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" name="login" class="btn btn-login" value="Login"/>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 </body>
