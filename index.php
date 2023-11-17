@@ -20,64 +20,80 @@ if(!isset($_SESSION['session_username'])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css">
 
     <style>
-        /* Your custom styles can go here if needed */
-        body {
-            font-Comic Sans MS: Arial, sans-serif;
-            background-color: #f5f5f5;
+    /* Your custom styles can go here if needed */
+    body {
+        font-family: 'Comic Sans MS', Arial, sans-serif; /* Correct the font-family property */
+        display: flex;
+        flex-direction: column; /* Set flex-direction to column */
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Fix typo in min-height property */
+        background: url('20200715_075826.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0; /* Remove default body margin */
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0.0); /* Adjust the alpha value as needed for transparency */
+        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+        
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.2s;
+ 
         }
 
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 20px;
-            margin:20px;
-            text-align: center;
-        }
+    .container {
+        text-align: center;
+        padding: 30px;
+    }
 
-        .container {
-            text-align: center;
-            padding: 30px;
-        }
+    .contain {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
 
-        .contain {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
+    a {
+        text-decoration: none;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    .card {
+        background-color: rgba(0, 0, 0, 0.0); /* Adjust the alpha value as needed for transparency */
+        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
 
-        .card {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.2s;
+ }
 
-        .card:hover {
-            background-color: #ADD8E6	;
-            color: #ADFF2F;
-            transform: scale(1.05);
-        }
+    .card:hover {
+        background-color: #ADD8E6	;
+        color: #ADFF2F;
+        transform: scale(1.05);
+    }
 
-        h2 {
-            margin: 0;
-            color: #3498db;
-        }
+    h2 {
+        margin: 0;
+        color: #010101;
+    }
 
-        footer {
-            background-color: #ffff;
-            color: black;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    footer {
+        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
 </head>
 <body>
     <header>

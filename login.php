@@ -72,10 +72,13 @@ if(isset($_POST['login'])){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         body {
-            background-image: url('your-background-image.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 1vh;
+            background : url('20200715_075826.jpg') no-repeat;
             background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-position: center;
         }
 
         .container {
@@ -83,13 +86,14 @@ if(isset($_POST['login'])){
         }
 
         .panel {
-            background-color: rgba(255, 255, 255, 0.8);
+                    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .panel-heading {
-            background-color: #3498db;
+            background-color: transparent;
             color: #ffffff;
             font-size: 24px;
             text-align: center;
