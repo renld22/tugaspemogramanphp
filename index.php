@@ -14,6 +14,9 @@ if ($_SESSION['level'] == 0) {
 }$welcomeMessage = '';
 if ($_SESSION['level'] == 2) {
     $welcomeMessage = 'Selamat datang, staff!';
+}$welcomeMessage = '';
+if ($_SESSION['level'] == 3) {
+    $welcomeMessage = 'Selamat datang, supervisor!';
 }
 
 ?>
