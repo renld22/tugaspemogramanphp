@@ -6,7 +6,15 @@ if(!isset($_SESSION['session_username'])){
     exit();
 }
 
+
+// Tambahkan pesan selamat datang untuk level 0
+$welcomeMessage = '';
+if ($_SESSION['level'] == 0) {
+    $welcomeMessage = 'Selamat datang, Admin!';
+}
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -98,6 +106,9 @@ if(!isset($_SESSION['session_username'])){
 <body>
     <header>
         <h1>MENU PEMOGRAMAN 3</h1>
+                <!-- Tampilkan pesan selamat datang untuk level 0 -->
+        <p><?php echo $welcomeMessage; ?></p>
+
     </header>
     <div class="container">
         <div class="contain">
@@ -106,6 +117,7 @@ if(!isset($_SESSION['session_username'])){
                     <h2>BARANG</h2>
                 </div>
             </a>
+            
             <a href="tampil_kategori.php">
                 <div class="card">
                     <h2>KATEGORI</h2>

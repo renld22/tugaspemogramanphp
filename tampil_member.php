@@ -7,14 +7,13 @@ if(!isset($_SESSION['session_username'])){
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tambah Transaksi</title>
 </head>
 <body>
-    <h2>Pemograman 3 2023</h2>
+    <h2>Pemrograman 3 2023</h2>
     <br>
     <a href="tambah_member.php">+ Tambah member</a>
     <br>
@@ -25,13 +24,12 @@ if(!isset($_SESSION['session_username'])){
             <th>Nama member</th>
             <th>Level</th>
             <th>Opsi</th>
-            
         </tr>
         <?php
-            include 'koneksi.php';
-            $no = 1;
-            $data = mysqli_query($koneksi,"Select * From member");
-            while($d = mysqli_fetch_array($data)){
+        include 'koneksi.php';
+        $no = 1;
+        $data = mysqli_query($koneksi, "SELECT * FROM member");
+        while($d = mysqli_fetch_array($data)){
         ?>
         <tr>
             <td><?php echo $no++; ?></td>
@@ -39,13 +37,26 @@ if(!isset($_SESSION['session_username'])){
             <td><?php echo $d['nama_member'];?></td>
             <td><?php echo $d['level'];?></td>
             <td>
-                <a href="edit_transaksi.php?id=<?php echo $d['id_member']; ?>">Edit</a>
-                <a href="hapus_transaksi.php?id=<?php echo $d['id_member']; ?>">Hapus</a>
+                <?php
+                // Tampilkan opsi Edit dan Hapus berdasarkan level user yang sedang login
+                if ($_SESSION['level'] == 0) {
+                    // Level 0 dapat mengedit dan menghapus
+                    echo '<a href="edit_transaksi.php?id=' . $d['id_member'] . '">Edit</a>';
+                    echo '<a href="hapus_transaksi.php?id=' . $d['id_member'] . '">Hapus</a>';
+                } elseif ($_SESSION['level'] == 1) {
+                    // Level 1 dapat mengedit dan menghapus
+                    echo '<a href="edit_transaksi.php?id=' . $d['id_member'] . '">Edit</a>';
+                    echo '<a href="hapus_transaksi.php?id=' . $d['id_member'] . '">Hapus</a>';
+                } elseif ($_SESSION['level'] == 2) {
+                    // Level 2 tidak dapat mengedit dan menghapus
+                    echo 'Tidak diizinkan';
+                }
+                ?>
             </td>
         </tr>
         <?php
-            }
-            ?>
+        }
+        ?>
     </table>
 </body>
 </html>
