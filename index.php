@@ -11,17 +11,7 @@ if(!isset($_SESSION['session_username'])){
 $welcomeMessage = '';
 if ($_SESSION['level'] == 0) {
     $welcomeMessage = 'Selamat datang, Admin!';
-}$welcomeMessage = '';
-if ($_SESSION['level'] == 2) {
-    $welcomeMessage = 'Selamat datang, staff!';
-}$welcomeMessage = '';
-if ($_SESSION['level'] == 3) {
-    $welcomeMessage = 'Selamat datang, supervisor!';
-}$welcomeMessage = '';
-if ($_SESSION['level'] == 4) {
-    $welcomeMessage = 'Selamat datang, manager!';
 }
-
 ?>
 
 
