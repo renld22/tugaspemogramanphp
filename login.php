@@ -69,6 +69,13 @@ if(isset($_POST['login'])){
                 // Level 2 bisa diarahkan ke halaman tertentu jika perlu
                 header("location: index.php");
             }
+            elseif ($_SESSION['level'] == 3) {
+                // Level 1 bisa diarahkan ke halaman tertentu jika perlu
+                header("location: index.php");
+            }elseif ($_SESSION['level'] == 4) {
+                // Level 1 bisa diarahkan ke halaman tertentu jika perlu
+                header("location: index.php");
+            }
         }
     }
 }
