@@ -13,7 +13,7 @@ if ($_SESSION['level'] == 0) {
     $welcomeMessage = 'Selamat datang, Admin!';
 }$welcomeMessage = '';
 if ($_SESSION['level'] == 2) {
-    $welcomeMessage = 'Selamat datang, staff!';
+    $welcomeMessage = 'Selamat datang, Staff!';
 }$welcomeMessage = '';
 if ($_SESSION['level'] == 3) {
     $welcomeMessage = 'Selamat datang, supervisor!';
@@ -45,7 +45,7 @@ if ($_SESSION['level'] == 4) {
         flex-direction: column; /* Set flex-direction to column */
         justify-content: center;
         align-items: center;
-        min-height: 100vh; /* Fix typo in min-height property */
+        min-height: 70vh; /* Fix typo in min-height property */
         background: url('20200715_075826.jpg') no-repeat;
         background-size: cover;
         background-position: center;
@@ -57,7 +57,7 @@ if ($_SESSION['level'] == 4) {
         backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
         
         border: 1px solid #ccc;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 20px;
         text-align: center;
         transition: background-color 0.3s, transform 0.2s;
