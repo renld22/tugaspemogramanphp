@@ -7,7 +7,7 @@ if(!isset($_SESSION['session_username'])){
 }
 
 
-// Tambahkan pesan selamat datang untuk level 0
+// Tambahkan pesan selamat datang untuk level 
 $welcomeMessage = '';
 if ($_SESSION['level'] == 0) {
     $welcomeMessage = 'Selamat datang, Admin!';
