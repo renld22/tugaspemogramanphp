@@ -120,7 +120,7 @@ while ($d = mysqli_fetch_array($data)) {
                 // Level 1 dapat mengedit dan menghapus
                 echo '<a href="edit_barang.php?id=' . $d['id_barang'] . '">Edit</a>';
                 echo '<a href="hapus_barang.php?id=' . $d['id_barang'] . '">Hapus</a>';
-            } elseif ($_SESSION['level'] == 2) {
+              } elseif ($_SESSION['level'] == 2) {
                 // Level 2 tidak dapat mengedit dan menghapus
                 echo 'Tidak diizinkan';
             } elseif ($_SESSION['level'] == 3) {

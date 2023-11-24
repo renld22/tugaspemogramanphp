@@ -123,6 +123,7 @@ if ($loggedInUserLevel == 0) {
     // Level 1 dapat mengedit dan menghapus semua level
     echo '<a href="edit_user.php?id=' . $d['id_user'] . '">EDIT</a>';
     echo '<a href="hapus_user.php?id=' . $d['id_user'] . '">HAPUS</a>';
+    
 } elseif ($loggedInUserLevel == 2) {
     // Level 2 tidak dapat mengedit dan menghapus
     echo 'Tidak diizinkan';

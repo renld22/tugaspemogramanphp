@@ -65,6 +65,7 @@ if(isset($_POST['login'])){
             } elseif ($_SESSION['level'] == 1) {
                 // Level 1 bisa diarahkan ke halaman tertentu jika perlu
                 header("location: halaman_level1.php");
+                
             } elseif ($_SESSION['level'] == 2) {
                 // Level 2 bisa diarahkan ke halaman tertentu jika perlu
                 header("location: index.php");
@@ -72,6 +73,7 @@ if(isset($_POST['login'])){
             elseif ($_SESSION['level'] == 3) {
                 // Level 1 bisa diarahkan ke halaman tertentu jika perlu
                 header("location: index.php");
+
             }elseif ($_SESSION['level'] == 4) {
                 // Level 1 bisa diarahkan ke halaman tertentu jika perlu
                 header("location: index.php");

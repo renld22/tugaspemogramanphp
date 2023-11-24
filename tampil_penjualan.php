@@ -54,12 +54,12 @@ if(!isset($_SESSION['session_username'])){
                     echo 'Tidak diizinkan';
                 }elseif ($_SESSION['level'] == 3) {
                 // Level 1 dapat mengedit dan menghapus
-                echo '<a href="edit_barang.php?id=' . $d['id_penjualan'] . '">Edit</a>';
-                echo '<a href="hapus_barang.php?id=' . $d['id_penjualan'] . '">Hapus</a>';
+                echo '<a href="edit_penjualan.php?id=' . $d['id_penjualan'] . '">Edit</a>';
+                echo '<a href="hapus_penjualan.php?id=' . $d['id_penjualan'] . '">Hapus</a>';
             }elseif ($_SESSION['level'] == 4) {
                 // Level 1 dapat mengedit dan menghapus
-                echo '<a href="edit_barang.php?id=' . $d['id_penjualan'] . '">Edit</a>';
-                echo '<a href="hapus_barang.php?id=' . $d['id_penjualan'] . '">Hapus</a>';
+                echo '<a href="edit_penjualan.php?id=' . $d['id_penjualan'] . '">Edit</a>';
+                echo '<a href="hapus_penjualan.php?id=' . $d['id_penjualan'] . '">Hapus</a>';
             }
                 ?>
             </td>
